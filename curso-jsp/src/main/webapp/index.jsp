@@ -1,125 +1,98 @@
-<!--
-=========================================================
-* Material Dashboard 2 - v3.1.0
-=========================================================
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 
-* Product Page: https://www.creative-tim.com/product/material-dashboard
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://www.creative-tim.com/license)
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="utf-8" />
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="apple-touch-icon" sizes="76x76"
-	href="assets/img/apple-icon.png">
-<link rel="icon" type="image/png" href="assets/img/favicon.png">
-<title>Login</title>
-<!--     Fonts and icons     -->
-<link rel="stylesheet" type="text/css"
-	href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
-<!-- Nucleo Icons -->
-<link href="assets/css/nucleo-icons.css" rel="stylesheet" />
-<link href="assets/css/nucleo-svg.css" rel="stylesheet" />
-<!-- Font Awesome Icons -->
-<script src="https://kit.fontawesome.com/42d5adcbca.js"
-	crossorigin="anonymous"></script>
-<!-- Material Icons -->
-<link
-	href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
-	rel="stylesheet">
-<!-- CSS Files -->
-<link id="pagestyle" href="assets/css/material-dashboard.css?v=3.1.0"
-	rel="stylesheet" />
-<!-- Nepcha Analytics (nepcha.com) -->
-<!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
-<script defer data-site="YOUR_DOMAIN_HERE"
-	src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+	<title>Acesso ao Sistema</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+
 </head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" action="<%= request.getContextPath() %>/ServletLogin" method="post">
+					<span class="login100-form-title p-b-26">
+						Bem Vindo
+					</span>
+		<div><h4 class="msg">${msg}</h4></div>
+					
+					<div class="wrap-input100 validate-input" data-validate = "Insira o Login">
+						<input class="input100" type="text" name="login">
+						<span class="focus-input100" data-placeholder="Login"></span>
+					</div>
 
-<body class="bg-gray-200">
-	<div class="container position-sticky z-index-sticky top-0">
-		<div class="row">
-			<div class="col-12"></div>
-		</div>
-	</div>
-	<main class="main-content  mt-0">
-		<div class="page-header align-items-start min-vh-100"
-			style="background-color: #2C3E50;">
-			<span class="mask bg-gradient-dark opacity-6"></span>
-			<div class="container my-auto">
-				<div class="row">
-					<div class="col-lg-4 col-md-8 col-12 mx-auto">
-						<div class="card z-index-0 fadeIn3 fadeInBottom">
-							<div
-								class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-								<div
-									class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
-									<h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Acesso
-										ao Sistema</h4>
-									<div class="row mt-3"></div>
-								</div>
-								<div class="card-body">
-								<h4>${msg}</h4>
-									<form role="form" class="text-start" action="ServletLogin" method="POST">
-									<input type="hidden" value="<%= request.getParameter("url") %>" name="url">
-									
-										<div class="input-group input-group-outline my-3">
-											<label class="form-label">Nome</label> <input type="text" name="login"
-												class="form-control" required>
-										</div>
-										<div class="input-group input-group-outline mb-3">
-											<label class="form-label">Senha</label> <input
-												type="password" name="senha" class="form-control" required>
-										</div>
-										<div
-											class="form-check form-switch d-flex align-items-center mb-3">
-											<input class="form-check-input" type="checkbox"
-												id="rememberMe" checked> <label
-												class="form-check-label mb-0 ms-3" for="rememberMe">Lembrar
-												neste computador</label>
-										</div>
-										<div class="text-center">
-											<button type="submit"
-												class="btn bg-gradient-primary w-100 my-4 mb-2">Acessar</button>
-										</div>
+					<div class="wrap-input100 validate-input" data-validate="Insira a Senha">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input100" type="password" name="senha">
+						<span class="focus-input100" data-placeholder="Senha"></span>
+					</div>
 
-									</form>
-								</div>
-							</div>
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								Login
+							</button>
 						</div>
 					</div>
-				</div>
 
+					
+				</form>
 			</div>
-	</main>
-	<!--   Core JS Files   -->
-	<script src="assets/js/core/popper.min.js"></script>
-	<script src="assets/js/core/bootstrap.min.js"></script>
-	<script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
-	<script src="assets/js/plugins/smooth-scrollbar.min.js"></script>
-	<script>
-		var win = navigator.platform.indexOf('Win') > -1;
-		if (win && document.querySelector('#sidenav-scrollbar')) {
-			var options = {
-				damping : '0.5'
-			}
-			Scrollbar.init(document.querySelector('#sidenav-scrollbar'),
-					options);
-		}
-	</script>
-	<!-- Github buttons -->
-	<script async defer src="https://buttons.github.io/buttons.js"></script>
-	<!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-	<script src="assets/js/material-dashboard.min.js?v=3.1.0"></script>
-</body>
+		</div>
+	</div>
+	
 
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+
+</body>
 </html>
+  
+
+
