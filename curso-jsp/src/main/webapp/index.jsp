@@ -2,7 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 
     <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<title>Acesso ao Sistema</title>
 	<meta charset="UTF-8">
@@ -31,7 +31,7 @@
 <!--===============================================================================================-->
 
 </head>
-<body>
+<body background="images/BG.jpg" style="size: landscape; ">
 	
 	<div class="limiter">
 		<div class="container-login100">
@@ -41,6 +41,7 @@
 						Bem Vindo
 					</span>
 		<div><h4 class="msg">${msg}</h4></div>
+		<div></div>
 					
 					<div class="wrap-input100 validate-input" data-validate = "Insira o Login">
 						<input class="input100" type="text" name="login">

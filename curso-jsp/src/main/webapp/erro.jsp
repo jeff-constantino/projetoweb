@@ -19,7 +19,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
 <meta charset="utf-8" />
@@ -59,7 +59,7 @@
 	</div>
 	<main class="main-content  mt-0">
 		<div class="page-header align-items-start min-vh-100"
-			style="background-color: #2C3E50;">
+			>
 			<span class="mask bg-gradient-dark opacity-6"></span>
 			<div class="container my-auto">
 				<div class="row">
